@@ -1,4 +1,4 @@
-# Rest API CRUD Processos Frontend Desafio
+# Rest API CRUD Processos Backend Desafio
 This project was created using Spring and database mysql. Lombok library was also used to genereted the basic class of the prject. 
 
 ## Starting Mysql database
