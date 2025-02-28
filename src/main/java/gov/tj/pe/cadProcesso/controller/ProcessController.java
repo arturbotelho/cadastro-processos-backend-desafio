@@ -60,7 +60,7 @@ public class ProcessController {
 	@PostMapping(consumes = "multipart/form-data", path = "/")
 	public ResponseEntity<CourtProcessDTO> createOrUpdateCourtProcess(@RequestParam(required = false) Long id,
 			@RequestParam String npu, @RequestParam LocalDate creationDate, @RequestParam(required = false) LocalDate visualizationDate,
-			@RequestParam String city, @RequestParam String uf, @RequestParam  MultipartFile pdfFile) {
+			@RequestParam String city, @RequestParam String uf, @RequestParam(required = false)  MultipartFile pdfFile) {
 
 		CourtProcess savedCourtProcess = CourtProcess.builder().id(id).npu(npu).creationDate(creationDate)
 				.visualizationDate(visualizationDate).city(city).uf(uf).build();
