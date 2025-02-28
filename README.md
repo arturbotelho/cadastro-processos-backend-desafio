@@ -10,6 +10,9 @@ docker-compose up
 
 ## Development server
 
+Install maven. Go to the official Apache Maven website:
+https://maven.apache.org/download.cgi
+
 Run commands bellow for a dev server. Navigate to http://localhost:8080/api/v1
 
 ```bash
