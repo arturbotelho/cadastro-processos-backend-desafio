@@ -13,8 +13,12 @@ docker-compose up
 Install maven. Go to the official Apache Maven website:
 https://maven.apache.org/download.cgi
 
-Run commands bellow for a dev server. Navigate to http://localhost:8080/api/v1
+Run commands bellow for a dev server. Base url http://localhost:8080/api/v1
 
 ```bash
 mvn spring-boot:run
 ```
+
+## Swagger API
+
+http://localhost:8080/swagger-ui/index.html
