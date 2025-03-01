@@ -1,19 +1,20 @@
-# Rest API CRUD Processos Backend Desafio
-This project was created using Spring and database mysql. Lombok library was also used to genereted the basic class of the prject. 
+# API Rest - Backend CRUD Processos do desafio
+Este projeto foi criado utilizando Spring e o banco de dados MySQL. A biblioteca Lombok também foi utilizada para gerar as classes básicas do projeto.
 
-## Starting Mysql database
-To set up the MySQL database, you need to run the docker-compose.yml script located in the root folder of the project. The docker-compose.yml file contains the information required to connect to the database.
+## Iniciando o banco de dados MySQL
+
+Para configurar o banco de dados MySQL, é necessário executar o script docker-compose.yml localizado na pasta raiz do projeto. O arquivo docker-compose.yml contém as informações necessárias para conectar ao banco de dados.
 
 ```bash
 docker-compose up
 ```
 
-## Development server
+## Iniciando o servidor
 
-Install maven. Go to the official Apache Maven website:
+Instale o Maven. Acesse o site oficial do Apache Maven:
 https://maven.apache.org/download.cgi
 
-Run commands bellow for a dev server. Base url http://localhost:8080/api/v1
+Execute o comando abaixo para iniciar o servidor. URL base: http://localhost:8080/api/v1
 
 ```bash
 mvn spring-boot:run
