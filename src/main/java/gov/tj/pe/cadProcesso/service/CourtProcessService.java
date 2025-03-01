@@ -1,5 +1,6 @@
 package gov.tj.pe.cadProcesso.service;
 
+import java.time.LocalDate;
 import java.util.Optional;
 
 import org.springframework.data.domain.Page;
@@ -38,5 +39,15 @@ public class CourtProcessService {
 	// Delete CourtProcess by ID
 	public void deleteCourtProcess(Long id) {
 		this.courtProcessRepository.deleteById(id);
+	}
+	
+	public Optional<CourtProcess> updateVisualizationDateById(Long id) {
+		 Optional<CourtProcess> result = this.getCourtProcessById(id);
+		 if (result.isPresent()) {
+			 CourtProcess courtProcess = result.get();
+			 courtProcess.setVisualizationDate(LocalDate.now());
+	         this.saveCourtProcess(courtProcess);
+		 }
+		 return result;
 	}
 }

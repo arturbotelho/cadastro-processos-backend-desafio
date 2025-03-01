@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -54,6 +55,19 @@ public class ProcessController {
 			return ResponseEntity.notFound().build(); // Return 404 if courtProcess not found
 		}
 	}
+	
+	@ResponseBody
+	@PutMapping("/{id}")
+	public ResponseEntity<CourtProcessDTO> updateVisualizationDateById(@PathVariable Long id) {
+		Optional<CourtProcess> courtProcess = service.updateVisualizationDateById(id);
+
+		if (courtProcess.isPresent()) {
+			return ResponseEntity.ok(CourtProcessDTO.from(courtProcess.get())); // Return 200 OK with courtProcess data
+		} else {
+			return ResponseEntity.notFound().build(); // Return 404 if courtProcess not found
+		}
+	}
+	
 
 	@ResponseBody
 	@Transactional
