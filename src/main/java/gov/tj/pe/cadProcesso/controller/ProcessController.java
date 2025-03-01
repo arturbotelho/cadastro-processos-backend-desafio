@@ -67,7 +67,6 @@ public class ProcessController {
 			return ResponseEntity.notFound().build(); // Return 404 if courtProcess not found
 		}
 	}
-	
 
 	@ResponseBody
 	@Transactional

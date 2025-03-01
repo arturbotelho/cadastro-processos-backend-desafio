@@ -45,8 +45,10 @@ public class CourtProcessService {
 		 Optional<CourtProcess> result = this.getCourtProcessById(id);
 		 if (result.isPresent()) {
 			 CourtProcess courtProcess = result.get();
-			 courtProcess.setVisualizationDate(LocalDate.now());
-	         this.saveCourtProcess(courtProcess);
+			 if (courtProcess.getVisualizationDate() == null) {
+				 courtProcess.setVisualizationDate(LocalDate.now());
+		         this.saveCourtProcess(courtProcess);	 
+			 }
 		 }
 		 return result;
 	}
